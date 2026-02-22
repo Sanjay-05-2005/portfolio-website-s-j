@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script>
+    // Wait for DOM to load before initializing animations
+    window.addEventListener('load', () => {
+      const reveals = document.querySelectorAll('.reveal');
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+      }, {threshold: 0.12});
+      reveals.forEach(r => obs.observe(r));
+    });
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Sanjay D - Portfolio</title>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <div class="brand">
+        <span class="logo">SD</span>
+        <span class="name">Sanjay D</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero container">
+      <div class="hero-left">
+        <h1>Hi, I'm <span>Sanjay</span></h1>
+        <p class="lead">“Passionate Mechanical Engineering student blending core engineering with web development and modern tech. Dedicated to designing practical, innovative solutions that create real-world impact.”</p>
+      </div>
+      <div class="hero-right">
+        <!-- Replace blue avatar with your photo -->
+        <img src="./images/WhatsApp Image 2026-02-22 at 9.38.01 PM.jpeg" alt="Sanjay D" class="profile-img">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== About Section ===== -->
+    <section id="about" class="container section about reveal">
+      <h2>About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Hello! I'm <strong>Sanjay</strong>, a Mechanical Engineering student with a strong foundation in core mechanical engineering while actively expanding my skills in web design and SQL.</p>
+          <p>I am passionate about integrating traditional engineering knowledge with modern IT technologies to create practical and innovative solutions. My goal is to develop expertise in both core engineering and technology-driven projects, preparing myself for diverse opportunities in the industry.</p>
+          <ul class="about-meta">
+            <li><strong>Location:</strong> Coimbatore, India</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Education Section ===== -->
+    <section id="education" class="container section education reveal">
+      <h2>Education</h2>
+      <div class="education-grid">
+        <div class="education-card">
+          <div class="education-header">
+            <h3>B.E. Mechanical Engineering</h3>
+            <p class="education-year">2023 - 2027</p>
+          </div>
+          <p class="education-institution">KIT – Kalaignar Karunanidhi Institute of Technology</p>
+          <p class="education-location">Coimbatore, India</p>
+        </div>
+
+        <div class="education-card">
+          <div class="education-header">
+            <h3>12th Grade (High School)</h3>
+            <p class="education-year">2023</p>
+          </div>
+          <p class="education-institution">GHSS-Government Higher Secondary school</p>
+          <p class="education-location">Kannam Palayam</p>
+          <p class="education-details">HSC-74 %</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects Section ===== -->
+<section id="projects" class="container section reveal">
+  <h2>Projects</h2>
+  <div class="projects-list">
+
+    <ul>
+      <li>
+        Blog Website – A responsive blog showcasing “Top 5 Places to Visit in India,” 
+        built entirely with HTML and CSS. Demonstrates clean design, responsive layouts, 
+        and strong foundational web development skills. –
+         <a href="https://sanjay-05-2005.github.io/blog-website/" target="_blank">View Project</a>
+
+       <section class="code-output">
+ 
+  <div class="img-pair">
+    <div class="img-box">
+    
+      <img src="./images/Screenshot 2025-09-10 223956.png" alt="Code Screenshot">
+    </div>
+    <div class="img-box">
+     
+      <img src="./images/Screenshot 2025-09-10 225122.png" alt="Website Output Screenshot">
+    </div>
+    
+  </div>
+</section>
+
+        
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+    <!-- ===== Certificates Section ===== -->
+    <section id="certificates" class="container section reveal">
+      <h2>Certificates & Internships</h2>
+      <div class="certificates-list">
+        <h3>Internships</h3>
+        <ul>
+          <li>Internship – FluidJet Technologies (Mechanical Domain, May–June 2025) – 
+            <a href="./images/internship certificate_page-0003.jpg" target="_blank">View Certificate</a>
+          </li>
+        </ul>
+
+        <h3>Courses</h3>
+        <ul>
+          <li>SolidWorks Workshop – KIT-Kalaignar Karunanidhi Institute of Technology</li>
+          <li>Product Development Using AutoCAD – Coursera</li>
+          <li>Python Foundation Certificate – Infosys Springboard</li>
+          <li>Fundamentals of Robotics & Industrial Automation – L&T EduTech</li>
+          <li>Thermodynamics – University of Colorado Boulder</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Skills Section ===== -->
+    <section id="skills" class="container section reveal">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <h3>Mechanical & Design Tools</h3>
+        <ul>
+          <li>SolidWorks</li>
+          <li>Fusion 360</li>
+          <li>AutoCAD</li>
+        </ul>
+
+        <h3>Programming & Digital Skills</h3>
+        <ul>
+          <li>Basic Python Programming</li>
+          <li>HTML & CSS (Web Development)</li>
+          <li>Basic Java Programming</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact" class="container section reveal">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:sjsanjay868@gmail.com">sjsanjay868@gmail.com</a></p>
+      <p><strong>Phone:</strong> +91-6385736241</p>
+      <p><strong>LinkedIn:</strong> 
+        <a href="https://www.linkedin.com/in/sanjay-d-17462a2a5/" target="_blank">
+          https://www.linkedin.com/in/sanjay-d-17462a2a5/
+        </a>
+      </p>
+      <p><strong>code chef</strong><a href="https://www.codechef.com/users/soft_breeze_70" target="_blank">
+          https://www.codechef.com/users/soft_breeze_70
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p> </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, {threshold: 0.12});
+    reveals.forEach(r => obs.observe(r));
+  </script>
+</body>
+</html>
